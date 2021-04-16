@@ -1,5 +1,9 @@
 # PecaFacil
 
+O projeto PecaFacil é uma plataforma de busca e análise de preços de peças de computadores e periféricos digitais.
+
+
+---------------------------------------------------------------
 Giancarlo Ponte Gamberi;
 31944043;
 giangamberi@hotmail.com.br/31944043@mackenzista.com.br;
