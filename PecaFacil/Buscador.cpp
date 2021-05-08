@@ -29,7 +29,7 @@ std::vector<Peca*> Buscador::busca(std::string entrada)
 
 	for (Peca* peca : this->pecas)
 	{
-		if (peca->nome == entrada)
+		if (peca->nome == entrada || peca->marca == entrada)
 		{
 			resultados.insert(pecas.end(), peca);
 		}
@@ -37,7 +37,8 @@ std::vector<Peca*> Buscador::busca(std::string entrada)
 
 	if (resultados.end() == resultados.begin())
 	{
-		// Print nehuma peça encontrada
+		// Nehuma peï¿½a encontrada
+		printf("Nenhuma peca encontrada");
 	}
 
 	return resultados;
