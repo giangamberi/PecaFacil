@@ -22,4 +22,6 @@ public:
 	Buscador(std::string);
 	
 	std::vector<Peca*> busca(std::string);
+
+	friend std::ostream& operator << (std::ostream&, Peca*);
 };

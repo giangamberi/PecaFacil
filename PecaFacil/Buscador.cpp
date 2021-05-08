@@ -12,7 +12,7 @@ Buscador::Buscador(std::string banco)
 		while (ip.good())
 		{
 			getline(ip, nome, ',');
-			getline(ip, marca, ',');
+			getline(ip, marca, '\n');
 		
 			this->pecas.insert(pecas.end(), new Peca(nome, marca));
 		}
