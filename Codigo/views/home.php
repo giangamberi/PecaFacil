@@ -107,8 +107,15 @@
 
 
     </div>
+ 
+    <?php 
+//$response = file_get_contents('https://serpapi.com/search.json?q=iphone+12&tbm=shop&location=Sao+Paulo%2C+Brazil&hl=en&gl=us&api_key=d1852b66269b0a00ffd60714a9217728f465384767d135bbd32082795dab2721');
 
+//echo $response;
+      ?>
     <script>
+
+
       // Get the Sidebar
       var mySidebar = document.getElementById("mySidebar");
 
