@@ -26,12 +26,12 @@
 
 <body>
 
-<ul class="nav justify-content-end">
+<!-- <ul class="nav justify-content-end " style="position:fixed">
     
 <H3 class="title">Peça Facil</H3>
 <br>
 <a href="index.php"><img src="./img/icon.png" width="40" style="text-align: center;margin-top: 6px;margin-left:5px;margin-right:10px" height="40"  ></a>
-</ul>
+</ul> -->
 <?php
 
 include('./php/pass.php');

@@ -38,7 +38,7 @@ $BUSCA = $_POST["BUSCA"];
           <div class="row">
 
             <div class="col">
-
+            <input type="hidden" name="BUSCA" value="<?php echo $BUSCA; ?>">
               <button name="FILTRO" value="MENOR" class="w3-bar-item w3-button w3-padding"><i style="color:green;" class="fa fa-money"></i>
                 <font color="white">Menor Preço</font>  </a>
               </button>
@@ -51,11 +51,11 @@ $BUSCA = $_POST["BUSCA"];
               <button name="FILTRO" value="LOJA" class="w3-bar-item w3-button w3-padding"><i style="color:PINK;" class="fa fa-shopping-bag"></i>
                 <font color="white">Loja</font>  </a>
               </button>
-              <button name="FILTRO" value="" class="w3-bar-item w3-button w3-padding"><i style="color:blue;" class="fa fa-search"></i>
-                <font color="white">Ordem de Busca</font>  </a>
+              <button name="BUSCA" value="" class="w3-bar-item w3-button w3-padding"><i style="color:blue;" class="fa fa-search"></i>
+                <font color="white">Limpar Busca</font>  </a>
               </button>
 
-              <input type="hidden" name="BUSCA" value="<?php echo $BUSCA; ?>">
+             
 
               <p>
 
@@ -118,8 +118,10 @@ $BUSCA = $_POST["BUSCA"];
         $result10  =  mysqli_query($con, "SELECT * FROM produtos WHERE BUSCA = '$BUSCA' AND EXTENSION = 'SALE'  ");
       } else if ($FILTRO == "LOJA") {
         $result10  =  mysqli_query($con, "SELECT * FROM produtos WHERE BUSCA = '$BUSCA' ORDER BY SOURCE  ");
+      } else if ($BUSCA != "") {
+        $result10  =  mysqli_query($con, "SELECT * FROM produtos WHERE BUSCA = '$BUSCA'  ");
       } else {
-        $result10  =  mysqli_query($con, "SELECT * FROM produtos   ");
+        $result10  =  mysqli_query($con, "SELECT * FROM produtos ORDER BY SOURCE  ");
       }
 
       while ($linha = mysqli_fetch_array($result10)) {
